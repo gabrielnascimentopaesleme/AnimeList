@@ -9,6 +9,7 @@ export async function POST(req: Request) {
     episodesCount,
     status,
     summary,
+    imageUrl,
     streamingPlatforms,
   } = body;
 
@@ -20,6 +21,7 @@ export async function POST(req: Request) {
         episodesCount,
         status,
         summary,
+        imageUrl,
         streamingPlatforms,
       },
     });
@@ -27,6 +29,18 @@ export async function POST(req: Request) {
   } catch (error) {
     return NextResponse.json(
       { error: 'Erro ao criar anime.' },
+      { status: 500 }
+    );
+  }
+}
+
+export async function GET() {
+  try {
+    const animes = await prisma.anime.findMany();
+    return NextResponse.json(animes, { status: 200 });
+  } catch (error) {
+    return NextResponse.json(
+      { error: 'Erro ao buscar animes.' },
       { status: 500 }
     );
   }
