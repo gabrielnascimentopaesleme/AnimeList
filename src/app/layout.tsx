@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[url('./images/bg_ptn.jpg')] w-screen overflow-x-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[url('/images/bg_ptn.jpg')] w-screen overflow-x-hidden`}
       >
         <nav className='fixed w-screen flex justify-between px-4 items-center bg-black/[.2] text-slate-200'>
           <div className="text-lg">
