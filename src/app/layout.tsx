@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
+import Link from 'next/link';
 import './globals.css';
 
 const geistSans = localFont({
@@ -30,15 +31,17 @@ export default function RootLayout({
       >
         <nav className='fixed w-screen flex justify-between px-4 items-center bg-black/[.2] text-slate-200'>
           <div className="text-lg">
-            <h2>Biblioteca</h2>
-            <h2>de Animes</h2>
+            <Link href="/">
+              <h2>Biblioteca</h2>
+              <h2>de Animes</h2>
+            </Link>
           </div>
 
           <div className='text-sm pr-4'>
             <ul className="flex gap-4">
-              <a href="">
+              <Link href="/">
                 <li>Início</li>
-              </a>
+              </Link>
               <a href="#">
                 <li>Animes</li>
               </a>
@@ -48,9 +51,9 @@ export default function RootLayout({
               <a href="#">
                 <li>Contato</li>
               </a>
-              <a href="" target="_blank">
+              <Link href="/login">
                 <li>Já tem uma conta?</li>
-              </a>
+              </Link>
             </ul>
           </div>
         </nav>
