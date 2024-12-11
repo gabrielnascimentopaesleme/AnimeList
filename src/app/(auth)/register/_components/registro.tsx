@@ -5,23 +5,26 @@ import register from '../_actions/register';
 
 export default function RegisterForm() {
   return (
-    <div className="h-screen flex items-center justify-center flex-col gap-4">
-      <div className="rounded-md flex flex-col gap-6 mx-auto w-1/3 h-4/5 bg-slate-800 text-white">
+    <div className="h-screen flex items-center bg-[rgb(34,34,34)] gap-4">
+      <div className="rounded-md flex flex-col gap-6 mx-auto w-1/4 h-4/5  text-white">
         <div>
-          <div className="flex flex-col items-center justify-center gap-2">
-            <h1 className="text-3xl font-bold mt-2">Cadastre-se</h1>
-            <h2>Crie uma conta gratuitamente</h2>
+          <div className="flex flex-col text-left">
+            <h2 className="text-3xl font-bold mt-4">
+              <span className="text-[#FAD363]">Inscreva-se agora</span>
+              <br />
+              Na Animoteca
+            </h2>
           </div>
         </div>
         <div>
-          <form action={register} className="px-6">
-            <div className="flex flex-col gap-8 items-center ">
+          <form action={register} className="pt-2 mb-4">
+            <div className="flex flex-col gap-4">
               <div className="grid w-full max-w-sm items-center gap-1.5">
                 <label className="text-xl text-slate-200" htmlFor="name">
                   Nome
                 </label>
                 <input
-                  className="text-base text-slate-950 p-1.5"
+                  className="text-xl text-slate-950 p-1.5 rounded-lg"
                   name="name"
                   type="name"
                   id="name"
@@ -33,7 +36,7 @@ export default function RegisterForm() {
                   Email
                 </label>
                 <input
-                  className="text-base text-slate-950 p-1.5"
+                  className="text-xl text-slate-950 p-1.5 rounded-lg"
                   name="email"
                   type="email"
                   id="email"
@@ -45,7 +48,7 @@ export default function RegisterForm() {
                   Senha
                 </label>
                 <input
-                  className="text-base text-slate-950 p-1.5"
+                  className="text-xl text-slate-950 p-1.5 rounded-lg"
                   name="password"
                   type="password"
                   id="password"
@@ -53,10 +56,10 @@ export default function RegisterForm() {
                 />
               </div>
             </div>
-            <div className="flex justify-center p-6 pb-0">
+            <div className="flex justify-center pt-4">
               <button
                 type="submit"
-                className="text-xl px-10 py-2 rounded-lg text-slate-200 border bg-green-600"
+                className="text-xl px-10 font-bold py-2 rounded-full text-slate-100 border bg-[#EE8C04]"
               >
                 Registrar
               </button>
@@ -64,11 +67,15 @@ export default function RegisterForm() {
           </form>
         </div>
         <div className="p-6 pt-0 flex justify-center gap-1">
-        <p>Já possui conta?</p>
-        <Link className='underline decoration-slate-50' href="/login">Faça Login</Link>
+          <p>Já possui conta?</p>
+          <Link className="underline decoration-slate-50" href="/login">
+            Faça Login
+          </Link>
         </div>
       </div>
-      <Link href="/">Voltar para Home</Link>
+      <figure>
+        <img src="/images/pngegg.png" alt="" />
+      </figure>
     </div>
   );
 }

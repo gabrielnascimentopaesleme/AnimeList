@@ -11,14 +11,12 @@ export default function LoginForm(props: {
   return (
     <div className="bg-[rgb(34,34,34)] h-screen flex items-center">
       <div className="rounded-md flex flex-col  gap-8 mx-auto w-1/4 h-4/5  text-white py-8">
-        <div>
           <div className="flex flex-col gap-2 text-left">
             <h2 className="text-3xl font-bold mt-4">
               <span className='text-[#FAD363]'>Faça Login</span><br />
-              Na AnimiList
+              Na Animoteca
             </h2>
           </div>
-        </div>
         <div>
           <form action={login} className="pt-2 mb-4">
             <div className="flex flex-col gap-8">
