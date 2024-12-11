@@ -39,7 +39,7 @@ const AnimeList = () => {
     <div className=" w-full flex justify-center">
       <div className="flex-wrap w-11/12 text-center flex justify-center text-slate-200">
         {animes.map((anime) => (
-          <div className="flex w-2/5 h-94 m-2 bg-black">
+          <div key={anime.id} className="flex w-2/5 h-94 m-2 bg-black">
 
             <div className="w-2/5 h-full bg-cover bg-left sm:bg-contain bg-no-repeat" style={{ backgroundImage: `url(${anime.imageUrl})` }}></div>
 
