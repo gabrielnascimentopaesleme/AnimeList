@@ -29,8 +29,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[url('/images/bg_ptn.jpg')] w-screen overflow-x-hidden`}
       >
-        <nav className='fixed w-screen flex justify-between px-4 items-center bg-black/[.2] text-slate-200'>
-          <div className="text-lg">
+        <nav className='fixed w-screen flex justify-between px-6 py-2 items-center bg-black/[.2] text-slate-200'>
+          <div className="text-xl font-extrabold">
             <Link href="/">
               <h2>Biblioteca</h2>
               <h2>de Animes</h2>
@@ -38,23 +38,9 @@ export default function RootLayout({
           </div>
 
           <div className='text-sm pr-4'>
-            <ul className="flex gap-4">
-              <Link href="/">
-                <li>Início</li>
+              <Link className='border border-[#EE8C04] p-3 rounded-xl hover:bg-[#EE8C04] font-extrabold' href="/login">
+                Já tem uma conta?
               </Link>
-              <a href="#">
-                <li>Animes</li>
-              </a>
-              <a href="#">
-                <li>Sobre</li>
-              </a>
-              <a href="#">
-                <li>Contato</li>
-              </a>
-              <Link href="/login">
-                <li>Já tem uma conta?</li>
-              </Link>
-            </ul>
           </div>
         </nav>
         {children}
